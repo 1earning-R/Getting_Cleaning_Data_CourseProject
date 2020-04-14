@@ -84,11 +84,4 @@ run_analysis <- function(directory="UCI_HAR_Dataset/",
   summary_filepath <- paste("data", summary_filename, sep = "/")
   write.csv(result, file = tidy_filepath, row.names = F)
   write.csv(sum_result, file = summary_filepath, row.names = F)
-  
-
-  
-  
-  
-  
-  
 }
