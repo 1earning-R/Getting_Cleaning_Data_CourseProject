@@ -31,7 +31,7 @@ The function calls as.character() and read.table() to obtain the key that relate
 The function calls read.table() to get the the integer vectors contained in *"train/subject_train.txt"* and *"test/subject_test.txt"*. 
 
 ##### Creates Variable to Denote Parent Data Set
-The function calls rep() to create character two vectors with lengths equal to the number of rows of the train and test data.frames. These vectors contain "train_set" and "test_set" to distinguish which observation originated from which data.frame.
+The function calls rep() to two create character vectors with lengths equal to the number of rows of the train and test data.frames. These vectors contain "train_set" and "test_set" to distinguish which observation originated from which data.frame.
 
 ##### Combines Data into Tidy Data Set
 The function calls cbind() to combine in order:
