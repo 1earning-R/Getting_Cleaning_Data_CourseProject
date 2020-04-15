@@ -15,7 +15,7 @@ The accelerometer measurements were further filtered to divide the measurement i
 
 *The following is a summary of the processing performed by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones). Follow link for more information.*
 
-A first order time derivative (**Jerk**^[Jerk is the fourth order time derivative of distance. This makes it the fourth item in the familiar set: distance,velocity, acceleration, jerk.]) was taken for each accelerometer and gyroscope measurement^[A more appropriate name for the time derivative of angular velocity would be angular acceleration. Probably to reduce ambiguity, the original dataset referred to the time order derivative for both acceleration and angular velocity as jerk. The tidy data set produced by run_analysis() maintains that convention.]. This measures how abruptly changes in motion occurred. **Jerk** was not calculated for the gravitational components.
+A first order time derivative (**Jerk**<sup>[1](#footnote1)</sup>) was taken for each accelerometer and gyroscope measurement<sup>[2](#footnote2)</sup>. This measures how abruptly changes in motion occurred. **Jerk** was not calculated for the gravitational components.
 
 The magnitudes (**Mag**) of the overall acceleration for both **Body** and **Gravity** and of the overall angular velocities were found using:
 
@@ -160,3 +160,9 @@ The summary data were produced by grouping the tidied dataset (described above) 
 
 ## The Variable Names
 The variables from summary dataset are identical in name and unit to the variables in the tidied dataset (described above). The **dataset** variable was ommitted from the summary dataset.
+
+-----------------------------------------------------------------
+
+<a name="footnote1">1</a>: Jerk is the fourth order time derivative of distance. This makes it the fourth item in the familiar set: distance, velocity, acceleration, jerk.
+
+<a name="footnote2">2</a>: A more appropriate name for the time derivative of angular velocity would be angular acceleration. Probably to reduce ambiguity, the original dataset referred to the time order derivative for both acceleration and angular velocity as jerk. The tidy data set produced by run_analysis() maintains that convention.
