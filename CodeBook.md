@@ -162,7 +162,7 @@ The summary data were produced by grouping the tidied dataset (described above) 
 The variables from summary dataset are identical in name and unit to the variables in the tidied dataset (described above). The **dataset** variable was ommitted from the summary dataset.
 
 -----------------------------------------------------------------
-
+##### Footnotes
 <a name="footnote1">1</a>: Jerk is the fourth order time derivative of distance. This makes it the fourth item in the familiar set: distance, velocity, acceleration, jerk.
 
 <a name="footnote2">2</a>: A more appropriate name for the time derivative of angular velocity would be angular acceleration. Probably to reduce ambiguity, the original dataset referred to the time order derivative for both acceleration and angular velocity as jerk. The tidy data set produced by run_analysis() maintains that convention.
