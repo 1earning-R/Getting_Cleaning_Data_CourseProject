@@ -7,7 +7,7 @@
 
 *The following is a summary of the processing performed by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones). Follow link for more information.*
 
-The measurements in the raw data were obtained using the methods outlined in the README file. The accelerometer (denoted **Acc** in the data) and gyroscope (denoted **Gyro** in the data) sensors each collected measurements along three spatial axes, labeled with standard notation **X**, **Y**, and **Z**. The accelerometer measured acceleration in units of g (9.8 meters/sec^2^), and the gyroscope measured angular velocity in units of radians/sec. These measurements were filtered by frequency to reduce noise in the data. 
+The measurements in the raw data were obtained using the methods outlined in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The accelerometer (denoted **Acc** in the data) and gyroscope (denoted **Gyro** in the data) sensors each collected measurements along three spatial axes, labeled with standard notation **X**, **Y**, and **Z**. The accelerometer measured acceleration in units of g (9.8 meters/sec^2^), and the gyroscope measured angular velocity in units of radians/sec. These measurements were filtered by frequency to reduce noise in the data. 
 
 The accelerometer measurements were further filtered to divide the measurement into acceleration due to **Gravity**, frequencies below 0.3 Hz, and acceleration due to the motion of the volunteer (denoted as **Body** in the data). The gyroscope measurements were assumed not to have a gravitational component.
 
@@ -32,7 +32,7 @@ An FFT was applied to each of the measured and calculated signals above, with th
 ## The Variable Names
 ### The Measurement Variables Contained in the Dataset
 
-The above processing produced the following 33 signals for each 2.56 second window as described in README. The analysis function, run_analysis() selected the **mean** and standard deviation, **std** reported in the original dataset for each, resulting in a total of 66 measurement variables.
+The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selected the **mean** and standard deviation, **std** reported in the original dataset for each, resulting in a total of 66 measurement variables.
 
 1. **tBodyAcc.X**
   * X component of acceleration due to volunteer's motion
