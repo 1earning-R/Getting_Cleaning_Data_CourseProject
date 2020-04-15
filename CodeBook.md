@@ -32,7 +32,7 @@ An FFT was applied to each of the measured and calculated signals above, with th
 ## The Variable Names
 ### The Measurement Variables Contained in the Data Set
 
-The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selects the **mean** and standard deviation, **std**, reported in the original data set for each, resulting in a total of 66 measurement variables.
+The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selects the **mean** and standard deviation, **std**, reported in the original data set for each, resulting in a total of 66 measurement variables. Following the naming scheme of the original data set, **mean** or **std** is appended to the end of the variable name, or (if it is an **X**, **Y**, or **Z** component variable) it is inserted between the variable name and the component suffix.
 
 1. **tBodyAcc.X**
   * X component of acceleration due to volunteer's motion
