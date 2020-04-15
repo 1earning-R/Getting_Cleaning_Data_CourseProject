@@ -57,4 +57,5 @@ write.csv(result[example_index,], file = "data/example.csv", row.names = F)
 - 'README.md': This file.
 
 ----------------------------------------------------
+##### Footnotes
 <a name="footnote1">1</a>: The original codebook for this dataset described the action as laying, but the author is a snob and gets hung up on minor details like the fact that lay is a transitive verb.
