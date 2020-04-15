@@ -40,11 +40,13 @@ The function takes the following inputs.
 
 #### This repository contains the following files:
 
-- 'scripts/run_analysis.R': A function which performs the tasks outlined in the above section.
+- 'run_analysis.R': A function which performs the tasks outlined in the above section.
+
+- 'data/result.txt': The tidied data containing the average and standard deviation measurements for all observations in the raw data.
 
 - 'data/summary.txt': A summary of the dataset produced by run_analysis(). This summary dataset is grouped by **subject_id** and **activity** and provides, grouped by each subject/activity pair, the mean values of the mean and standard deviation measurements provided in the raw data.
 
-- 'data/example.txt': An abbreviated example of the tidied dataset produced by run_analysis(). Even though the tidied dataset was reduced to a fraction of the raw data's original size, it was still too large to commit. This example was produced by randomly selecting 200 observations from the tidied dataset with the code below, where **result** is the tidied dataset.
+- 'data/example.txt': An abbreviated example of the tidied dataset that is small enough to be viewed in GitHub. This example was produced by randomly selecting 200 observations from the tidied dataset with the code below, where **result** is the tidied dataset.
 
 ```
 set.seed(28)
