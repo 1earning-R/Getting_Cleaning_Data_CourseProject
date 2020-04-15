@@ -1,4 +1,4 @@
-# Code Book For Tidied Dataset
+# Code Book For Tidied Data Set
 
 -----------------------------
 
@@ -30,9 +30,9 @@ The magnitudes were also calculated for each **Jerk** signal.
 An FFT was applied to each of the measured and calculated signals above, with the exception of the **Gravity** signals. The FFT converted time dependent signal (represented in the data by the prefix, **t**) into relative strength of frequencies present in the signal (represented by prefix **f**).
 
 ## The Variable Names
-### The Measurement Variables Contained in the Dataset
+### The Measurement Variables Contained in the Data Set
 
-The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selected the **mean** and standard deviation, **std** reported in the original dataset for each, resulting in a total of 66 measurement variables.
+The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selected the **mean** and standard deviation, **std** reported in the original data set for each, resulting in a total of 66 measurement variables.
 
 1. **tBodyAcc.X**
   * X component of acceleration due to volunteer's motion
@@ -135,10 +135,10 @@ The above processing produced the following 33 signals for each 2.56 second wind
   * Numerical, units of Hz
 
 ### Identification Variables
-In addition to the 66 measurement variables, the result tidied dataset contains 3 identification variables:
+In addition to the 66 measurement variables, the result tidied data set contains 3 identification variables:
 
 1. **dataset**
-  * Identifies which parent dataset (training or testing) contained the observation before merging in run_analysis()
+  * Identifies which parent data set (training or testing) contained the observation before merging in run_analysis()
   * Factor w/ 2 levels "test_set", "train_set"
 2. **subject_id**
   * Identifies which volunteer performed the activity during the experiment
@@ -151,18 +151,18 @@ In addition to the 66 measurement variables, the result tidied dataset contains 
 &nbsp;
   
   
-# Code Book for Summary Dataset
+# Code Book for Summary Data Set
 
 ------------------------------
 
-## Producing the Summary Dataset
-The summary data were produced by grouping the tidied dataset (described above) by **activity** and **subject_id**, then averaging each measurement variable listed above for each of the 180 activity, subject pairs. The result is a dataset in which there is only one observation from each activity per each subject.
+## Producing the Summary Data Set
+The summary data were produced by grouping the tidied data set (described above) by **activity** and **subject_id**, then averaging each measurement variable listed above for each of the 180 activity, subject pairs. The result is a data set in which there is only one observation from each activity per each subject.
 
 ## The Variable Names
-The variables from summary dataset are identical in name and unit to the variables in the tidied dataset (described above). The **dataset** variable was ommitted from the summary dataset.
+The variables from summary data set are identical in name and unit to the variables in the tidied data set (described above). The **dataset** variable was ommitted from the summary data set.
 
 -----------------------------------------------------------------
 ##### Footnotes
 <a name="footnote1">1</a>: Jerk is the fourth order time derivative of distance. This makes it the fourth item in the familiar set: distance, velocity, acceleration, jerk.
 
-<a name="footnote2">2</a>: A more appropriate name for the time derivative of angular velocity would be angular acceleration. Probably to reduce ambiguity, the original dataset referred to the time order derivative for both acceleration and angular velocity as jerk. The tidy data set produced by run_analysis() maintains that convention.
+<a name="footnote2">2</a>: A more appropriate name for the time derivative of angular velocity would be angular acceleration. Probably to reduce ambiguity, the original data set referred to the time order derivative for both acceleration and angular velocity as jerk. The tidy data set produced by run_analysis() maintains that convention.
