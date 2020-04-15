@@ -21,7 +21,7 @@ The magnitudes (**Mag**) of the overall acceleration for both **Body** and **Gra
 
 **Mag**<sup>2</sup> = **X**<sup>2</sup> + **Y**<sup>2</sup> + **Z**<sup>2</sup>
 
-The magnitudes were also calculated for each **Jerk** signal.
+The magnitudes were also calculated for each **Jerk** signal in the same way.
 
 ### Fast Fourier Transform (FFT)
 
@@ -32,7 +32,7 @@ An FFT was applied to each of the measured and calculated signals above, with th
 ## The Variable Names
 ### The Measurement Variables Contained in the Data Set
 
-The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selected the **mean** and standard deviation, **std** reported in the original data set for each, resulting in a total of 66 measurement variables.
+The above processing produced the following 33 signals for each 2.56 second window as described in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The analysis function, run_analysis() selects the **mean** and standard deviation, **std**, reported in the original data set for each, resulting in a total of 66 measurement variables.
 
 1. **tBodyAcc.X**
   * X component of acceleration due to volunteer's motion
@@ -135,7 +135,7 @@ The above processing produced the following 33 signals for each 2.56 second wind
   * Numerical, units of Hz
 
 ### Identification Variables
-In addition to the 66 measurement variables, the result tidied data set contains 3 identification variables:
+In addition to the 66 measurement variables, the resulting tidied data set contains 3 identification variables:
 
 1. **dataset**
   * Identifies which parent data set (training or testing) contained the observation before merging in run_analysis()
@@ -159,7 +159,7 @@ In addition to the 66 measurement variables, the result tidied data set contains
 The summary data were produced by grouping the tidied data set (described above) by **activity** and **subject_id**, then averaging each measurement variable listed above for each of the 180 activity, subject pairs. The result is a data set in which there is only one observation from each activity per each subject.
 
 ## The Variable Names
-The variables from summary data set are identical in name and unit to the variables in the tidied data set (described above). The **dataset** variable was ommitted from the summary data set.
+The variables from the summary data set are identical in name and units to the variables in the tidied data set (described above). The **dataset** variable was ommitted from the summary data set.
 
 -----------------------------------------------------------------
 ##### Footnotes
