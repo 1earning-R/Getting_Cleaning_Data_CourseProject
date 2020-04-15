@@ -25,31 +25,31 @@ The function takes the following inputs.
 1. **directory**, containing the raw data 
   * This directory's structure should be unaltered after downloading and uncompressing.
   * The default for **directory** is "UCI_HAR_Dataset"
-2. **tidy_filename**, the name of the .csv file containing the new, tidy dataset
+2. **tidy_filename**, the name of the .txt file containing the new, tidy dataset
   * This tidied dataset will include observations from both the training and testing datasets.
   * It will also have added variables to denote the subject identification number (1-30), activity (walking, walking upstairs, walking downstairs, sitting, standing, or laying), and whether it came from the train or test dataset (train, test).
   * The variable names will mostly be preserved from the names provided in the features.txt file found in the raw data, except parentheses will be removed and dashes will be replaced with periods. This is to facilitate reading the names into R.
   * This new, tidy dataset will be saved in a folder named "data/" in the working directory. The function will create this folder if it does not exist.
-  * The default for **tidy_filename** is "result.csv""
-3. **summary_filename**, the name of the .csv file containing a summary dataset
+  * The default for **tidy_filename** is "result.txt""
+3. **summary_filename**, the name of the .txt file containing a summary dataset
   * This summary dataset will be the grouped by subject and activity with each variable from the previous dataset averaged for each of the 180 activity, subject pairs.
   * This dataset does not contain information about which dataset (training or testing) the observations originated
   * This summary dataset will also be saved in the "data/" directory
-  * The default for **summary_filename** is "summary.csv"
+  * The default for **summary_filename** is "summary.txt"
   
 
 #### This repository contains the following files:
 
 - 'scripts/run_analysis.R': A function which performs the tasks outlined in the above section.
 
-- 'data/summary.csv': A summary of the dataset produced by run_analysis(). This summary dataset is grouped by **subject_id** and **activity** and provides, grouped by each subject/activity pair, the mean values of the mean and standard deviation measurements provided in the raw data.
+- 'data/summary.txt': A summary of the dataset produced by run_analysis(). This summary dataset is grouped by **subject_id** and **activity** and provides, grouped by each subject/activity pair, the mean values of the mean and standard deviation measurements provided in the raw data.
 
-- 'data/example.csv': An abbreviated example of the tidied dataset produced by run_analysis(). Even though the tidied dataset was reduced to a fraction of the raw data's original size, it was still too large to commit. This example was produced by randomly selecting 200 observations from the tidied dataset with the code below, where **result** is the tidied dataset.
+- 'data/example.txt': An abbreviated example of the tidied dataset produced by run_analysis(). Even though the tidied dataset was reduced to a fraction of the raw data's original size, it was still too large to commit. This example was produced by randomly selecting 200 observations from the tidied dataset with the code below, where **result** is the tidied dataset.
 
 ```
 set.seed(28)
 example_index <- sample(1:dim(result)[1],200)
-write.csv(result[example_index,], file = "data/example.csv", row.names = F)  
+write.table(result[example_index,], file = "data/example.txt", row.names = F)  
 ```
 
 - 'CodeBook.md': A file describing the variables contained in the tidy dataset and the subsequent summary dataset produced by run_analysis()

@@ -37,3 +37,14 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Large Datasets
+UCI_HAR_Dataset
+data/result.csv
+
+# Markdown Previews
+README.html
+CodeBook.html
+
+# Function to get example data
+scripts/run_example_analysis.R
