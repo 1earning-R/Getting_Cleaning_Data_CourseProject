@@ -9,7 +9,7 @@ This repository contains the author's submission to Johns Hopkins University's '
 3. Each type of observational unit forms a table
 
 ### The Data
-The raw data were collected by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) and contain 'features' calculated from accelerometer and gyroscope signals collected during an experiment in which volunteers, wearing a smartphone equipped with standard acclerometer and gyroscope, performed 6 different activities: walking, walking up stairs, walking down stairs, sitting, standing, and lying^[The original codebook for this dataset described the action as laying, but the author is a snob and gets hung up on minor details like the fact that lay is a transitive verb.]. 
+The raw data were collected by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) and contain 'features' calculated from accelerometer and gyroscope signals collected during an experiment in which volunteers, wearing a smartphone equipped with standard acclerometer and gyroscope, performed 6 different activities: walking, walking up stairs, walking down stairs, sitting, standing, and lying<sup>[1](#footnote1)</sup>. 
 The data collected in this experiment were processed to reduce noise. Calculations of physical properties and statistical measurements were then made from the data in 2.56 second windows (the data were collected at 50 counts/second, resulting in 128 measurements per window). These windows overlapped adjacent windows such that 64 measurements were shared by any two neighboring windows. For a more complete discussion of the measurements, refer to CodeBook.md.The resulting dataset of statistical measurements contained 10,299 observations of 561 variables. A wealth of information but unwieldy. Lastly, the observations were divided into two datasets for machine learning purposes: training and testing.
 
 
@@ -49,3 +49,6 @@ The function takes the following inputs.
 - 'README.md': This file. The one you see before you.
 
 **Note that the tidy dataset was not committed to this repository. This is because even reduced to a fraction of the raw data's original size, it is too large to upload. If you are willing to share your github expertise, feel free to reach out to me and help me figure out how to upload a compressed file without GitHub automagically decompressing it.**
+
+----------------------------------------------------
+<a name="footnote1">1</a>: The original codebook for this dataset described the action as laying, but the author is a snob and gets hung up on minor details like the fact that lay is a transitive verb.
