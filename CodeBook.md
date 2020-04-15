@@ -7,7 +7,7 @@
 
 *The following is a summary of the processing performed by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones). Follow link for more information.*
 
-The measurements in the raw data were obtained using the methods outlined in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The accelerometer (denoted **Acc** in the data) and gyroscope (denoted **Gyro** in the data) sensors each collected measurements along three spatial axes, labeled with standard notation **X**, **Y**, and **Z**. The accelerometer measured acceleration in units of g (9.8 meters/sec^2^), and the gyroscope measured angular velocity in units of radians/sec. These measurements were filtered by frequency to reduce noise in the data. 
+The measurements in the raw data were obtained using the methods outlined in [README.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/README.md). The accelerometer (denoted **Acc** in the data) and gyroscope (denoted **Gyro** in the data) sensors each collected measurements along three spatial axes, labeled with standard notation **X**, **Y**, and **Z**. The accelerometer measured acceleration in units of g (9.8 meters/sec<sup>2</sup>), and the gyroscope measured angular velocity in units of radians/sec. These measurements were filtered by frequency to reduce noise in the data. 
 
 The accelerometer measurements were further filtered to divide the measurement into acceleration due to **Gravity**, frequencies below 0.3 Hz, and acceleration due to the motion of the volunteer (denoted as **Body** in the data). The gyroscope measurements were assumed not to have a gravitational component.
 
@@ -19,7 +19,7 @@ A first order time derivative (**Jerk**<sup>[1](#footnote1)</sup>) was taken for
 
 The magnitudes (**Mag**) of the overall acceleration for both **Body** and **Gravity** and of the overall angular velocities were found using:
 
-**Mag**^2^ = **X**^2^ + **Y**^2^ + **Z**^2^
+**Mag**<sup>2</sup> = **X**<sup>2</sup> + **Y**<sup>2</sup> + **Z**<sup>2</sup>
 
 The magnitudes were also calculated for each **Jerk** signal.
 
@@ -72,13 +72,13 @@ The above processing produced the following 33 signals for each 2.56 second wind
   * Numerical, units of radians/sec
 13. **tBodyGyroJerk.X**
   * X component of instantaneous change in angular velocity
-  * Numerical, units of radians/sec^2^
+  * Numerical, units of radians/sec<sup>2</sup>
 14. **tBodyGyroJerk.Y**
   * Y component of instantaneous change in angular velocity
-  * Numerical, units of radians/sec^2^
+  * Numerical, units of radians/sec<sup>2</sup>
 15. **tBodyGyroJerk.Z**
   * Z component of instantaneous change in angular velocity
-  * Numerical, units of radians.sec^2^
+  * Numerical, units of radians.sec<sup>2</sup>
 16. **tBodyAccMag**
   * Overall magnitude of acceleration due to volunteer's motion
   * Numerical, units of g
@@ -93,7 +93,7 @@ The above processing produced the following 33 signals for each 2.56 second wind
   * Numerical, units of radians/sec
 20. **tBodyGyroJerkMag**
   * Instantaneous change in overall magnitude of angular velocity
-  * Numerical, units of radians/sec^2^
+  * Numerical, units of radians/sec<sup>2</sup>
 21. **fBodyAcc.X**
   * Frequency domain signal of x component acceleration due to volunteer's motion
   * Numerical, units of Hz
