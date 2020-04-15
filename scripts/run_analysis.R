@@ -37,10 +37,12 @@ run_analysis <- function(directory="UCI_HAR_Dataset/",
   trn_data <- read.table(data_trnpath)
   ##  READ IN FEATURE NAMES
   features <- as.character(read.table(list_ftrpath)[,2])
+  ## REMOVE DUPLICATE "BODY" STRING IN FEATURE NAMES
+  features <- sapply(features, temp<-function(n) sub("BodyBody","Body",n))
   
   ##  REMOVE PARENTHESES AND DASHES FOR SMOOTHER IMPORTING INTO R
-  new_names <- sapply(features, tmp <- function(n) sub("-",".",n))
-  new_names <- sapply(features, tmp <- function(n) sub("[(][)]","",n))
+  new_names <- sapply(features, tmp <- function(n) gsub("-",".",n))
+  new_names <- sapply(new_names, tmp <- function(n) gsub("[(][)]","",n))
   names(tst_data) <- new_names; names(trn_data) <- new_names
   
   ##  SEARCH FOR MEAN AND STD MEASUREMENTS AND FILTER DATASETS
@@ -61,7 +63,7 @@ run_analysis <- function(directory="UCI_HAR_Dataset/",
   sbjc_tst <- read.table(sbjc_tstpath)[,1]
   
   ##  COMBINE INTO RESULT DATASET
-  new_trn <- cbind(dataset = rep("training_set",nrow(trn_data)),
+  new_trn <- cbind(dataset = rep("train_set",nrow(trn_data)),
                    subject_id = sbjc_trn,
                    activity = actv_trn,
                    trn_data)
