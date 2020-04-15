@@ -10,7 +10,7 @@ This repository contains the author's submission to Johns Hopkins University's '
 
 ### The Data
 The raw data were collected by [Reyes-Ortiz et. al](http://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) and contain 'features' calculated from accelerometer and gyroscope signals collected during an experiment in which volunteers, wearing a smartphone equipped with standard acclerometer and gyroscope, performed 6 different activities: walking, walking up stairs, walking down stairs, sitting, standing, and lying<sup>[1](#footnote1)</sup>. 
-The data collected in this experiment were processed to reduce noise. Calculations of physical properties and statistical measurements were then made from the data in 2.56 second windows (the data were collected at 50 counts/second, resulting in 128 measurements per window). These windows overlapped adjacent windows such that 64 measurements were shared by any two neighboring windows. For a more complete discussion of the measurements, refer to [CodeBook.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/CodeBook.md).The resulting dataset of statistical measurements contained 10,299 observations of 561 variables. A wealth of information but unwieldy. Lastly, the observations were divided into two datasets for machine learning purposes: training and testing.
+The data collected in this experiment were processed to reduce noise. Calculations of physical properties and statistical measurements were then made from the data in 2.56 second windows (the data were collected at 50 counts/second, resulting in 128 measurements per window). These windows overlapped adjacent windows such that 64 measurements were shared by any two neighboring windows. For a more complete discussion of the measurements, refer to [CodeBook.md](https://github.com/1earning-R/Getting_Cleaning_Data_CourseProject/blob/master/CodeBook.md). The resulting dataset of statistical measurements contained 10,299 observations of 561 variables. A wealth of information but unwieldy. Lastly, the observations were divided into two datasets for machine learning purposes: training and testing.
 
 
 The challenge presented by this project was to reunite these two datasets and filter it down to only the variables (called 'features' in the dataset) that were calculated by taking the means and the standard deviations of the physical properties.
@@ -44,11 +44,17 @@ The function takes the following inputs.
 
 - 'data/summary.csv': A summary of the dataset produced by run_analysis(). This summary dataset is grouped by **subject_id** and **activity** and provides, grouped by each subject/activity pair, the mean values of the mean and standard deviation measurements provided in the raw data.
 
+- 'data/example.csv': An abbreviated example of the tidied dataset produced by run_analysis(). Even though the tidied dataset was reduced to a fraction of the raw data's original size, it was still too large to commit. This example was produced by randomly selecting 1,000 observations from the tidied dataset with the code below, where **result** is the tidied dataset.
+
+```
+set.seed(28)
+example_index <- sample(1:dim(result)[1],1000)
+write.csv(result[example_index,], file = "data/example.csv", row.names = F)  
+```
+
 - 'CodeBook.md': A file describing the variables contained in the tidy dataset and the subsequent summary dataset produced by run_analysis()
 
-- 'README.md': This file. The one you see before you.
-
-**Note that the tidy dataset was not committed to this repository. This is because even reduced to a fraction of the raw data's original size, it is too large to upload. If you are willing to share your github expertise, feel free to reach out to me and help me figure out how to upload a compressed file without GitHub automagically decompressing it.**
+- 'README.md': This file.
 
 ----------------------------------------------------
 <a name="footnote1">1</a>: The original codebook for this dataset described the action as laying, but the author is a snob and gets hung up on minor details like the fact that lay is a transitive verb.
