@@ -60,11 +60,19 @@ Finally, the function uses the select(), group_by(), and summarize() functions f
   * This summary data set will also be saved in the "data/" directory
   * The default for **summary_filename** is *"summary.txt"*
   
+### Exploratory Plots
+Four exploratory plots were produced and saved to .pdf files in the *plots/* directory. The script *scripts/boxplot_by_component.R* was run with basic alterations to produce the plots. They show box and whisker plots by activity and component for the following variables:
+
+- tBodyAcc.(X,Y,Z).mean
+- fBodyAcc.(X,Y,Z).mean
+- tBodyGyro.(X,Y,Z).mean
+- fBodyGyro.(X,Y,Z).mean
+
 
 ### The Files
 #### This repository contains the following files:
 
-- 'run_analysis.R': A function which performs the tasks outlined in the above section.
+- 'scripts/run_analysis.R': A function which performs the tasks outlined in the above section.
 
 - 'data/result.txt': The tidied data containing the average and standard deviation measurements for all observations in the raw data.
 
@@ -79,6 +87,10 @@ write.table(result[example_index,], file = "data/example.txt", row.names = F)
 ```
 
 - 'CodeBook.md': A file describing the variables contained in the tidy data set and the subsequent summary data set produced by run_analysis()
+
+- 'scripts/boxplot_by_component.R': A script with basic outline for producing box and whisker plots by activity and component
+
+- 'plots/': A folder containing the plots produced by *boxplot_by_component.R*
 
 - 'README.md': This file.
 
